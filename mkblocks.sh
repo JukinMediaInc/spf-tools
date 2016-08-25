@@ -31,7 +31,7 @@ prefix="spf"
 policy="~all"
 delim="^"
 header="v=spf1"
-length=257
+length=514
 
 usage() {
     cat <<-EOF
