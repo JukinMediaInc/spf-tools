@@ -44,6 +44,8 @@ do
   done < $tmpfile.cidr
 done < $tmpfile.addr
 
+grep -v "^ip4:" $tmpfile.orig
+
 if
   test -f $tmpfile.grep
 then
@@ -51,5 +53,3 @@ then
 else
   cat $tmpfile
 fi | sed 's/^/ip4:/'
-
-grep -v "^ip4:" $tmpfile.orig
